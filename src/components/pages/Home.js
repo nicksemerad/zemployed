@@ -1,8 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-
-
+import Banner from '../../components/images/zemp_banner.png'
 
 const Home = () => (
   <div style={{ width: '100%'}}>
@@ -12,29 +11,32 @@ const Home = () => (
     margin: 'auto',
     marginBottom: '0px',
     
-    height: '1100px',
+    height: '100vh',
     padding: '60px',
-    backgroundColor: '#FFFF',
+    backgroundColor: '#2f2d91',
    
   }}>
     <div style={{textAlign: 'center'}}>
 
-    <h1 style={{color: '#221C35'}}>Welcome to Zemployed</h1>
-    <h2 style={{color: '#2B7A78', marginTop: '50px'}}>About Us</h2>
-    <h3 style={{color: '#221C35'}}>Yo wassup this is zemployed it doesn't work 
-        totally right now but it will and when it does it will be very cool and you
-        will want to register and then put your resume in here then jobs come out its
-        pretty slick
-    </h3>
-    <h1 style={{color: '#221C35'}}>WE FINNA CHANGE TO NIGHT THEME</h1>
+    
+    <img src={Banner} alt={'Zemployed'} style={{width: '100%'}}/>
+
     <div style={{marginTop: '50px'}}>
-      <Button color='black'>
-        <Link to="/login" style={{color:'#FFF'}}>
+    <Button color='#FFFFFF'>
+        <Link to="/register" style={{color:'#2f2d91'}}>
+        Register</Link>
+      </Button>
+      <Button color='white'>
+        <Link to="/login" style={{color:'#2f2d91'}}>
         Log In</Link>
       </Button>
-      <Button color='black'>
-        <Link to="/register" style={{color:'#FFF'}}>
-        Register</Link>
+      <Button color='white'>
+        <Link to="/role" style={{color:'#2f2d91'}}>
+        Role</Link>
+      </Button>
+      <Button color='white'>
+        <Link to="/setup" style={{color:'#2f2d91'}}>
+        Setup Profile</Link>
       </Button>
     </div>
   </div>

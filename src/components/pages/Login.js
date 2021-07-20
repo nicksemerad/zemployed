@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Form, Segment, Header } from 'semantic-ui-react';
+import { Button, Form, Segment } from 'semantic-ui-react';
 
 class Login extends Component {
   state = { email: '', password: '' }
@@ -15,9 +15,21 @@ class Login extends Component {
   render() {
     const { email, password, } = this.state;
     return (
+      <div style={{
+        width: '100%',
+        margin: 'auto',
+        marginBottom: '0px',
+        
+        height: '100vh',
+        padding: '60px',
+        backgroundColor: '#2f2d91',
+       
+       
+      }}>
       <Segment basic>
-        <Header as='h1' textAlign='center'>Login</Header>
+        <h1 style={{color:'white', textAlign: 'center'}}>Login</h1>
         <Form onSubmit={this.handleSubmit}>
+          
           <Form.Input
             label="Email"
             autoFocus
@@ -27,8 +39,9 @@ class Login extends Component {
             placeholder='Email'
             onChange={this.handleChange}
           />
+          
           <Form.Input
-            label="Password"
+            label='Password'
             required
             name='password'
             value={password}
@@ -41,6 +54,7 @@ class Login extends Component {
           </Segment>
         </Form>
       </Segment>
+      </div>
     )
   }
 }

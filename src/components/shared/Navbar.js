@@ -18,7 +18,7 @@ class Navbar extends Component {
         <Menu ui pointing secondary>
           <Link to='/'>
             <Menu.Item
-              style={{ color: '#221C35'}}
+              style={{ color: 'White'}}
               name='home'
               active={activeItem === 'home'}
               onClick={this.handleItemClick}/>
@@ -26,14 +26,14 @@ class Navbar extends Component {
           <Menu.Menu position='right'>
             <Link to='/login'>
               <Menu.Item
-                style={{ color: '#221C35'}}
+                style={{ color: 'White'}}
                 name='login'
                 active={activeItem === 'login'}
                 onClick={this.handleItemClick}/>
             </Link>
             <Link to='/register'>
               <Menu.Item
-                style={{ color: '#221C35'}}
+                style={{ color: 'White'}}
                 name='register'
                 active={activeItem === 'register'}
                 onClick={this.handleItemClick}/>
