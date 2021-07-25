@@ -4,7 +4,7 @@ class Profile extends Component {
   state = {user: 'user'}
 
   render() {
-    const {name, profilePic, role, profession, etc} = this.state;
+    const {name, profilePic, role, profession, etc} = this.state.user;
     return (
       <div>
         <h3>profilePic:</h3>

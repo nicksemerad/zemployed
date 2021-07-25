@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import Logo from '../images/zemp_logo.png'
 
 
 class Navbar extends Component {
@@ -17,11 +18,8 @@ class Navbar extends Component {
       }}>
         <Menu ui pointing secondary>
           <Link to='/'>
-            <Menu.Item
-              style={{ color: 'White'}}
-              name='home'
-              active={activeItem === 'home'}
-              onClick={this.handleItemClick}/>
+            <img
+              src={Logo} alt={'Home'} style={{width: '19%', }}/>
           </Link>
           <Menu.Menu position='right'>
             <Link to='/login'>

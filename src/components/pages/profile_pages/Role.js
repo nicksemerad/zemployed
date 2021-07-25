@@ -2,17 +2,17 @@ import React, {Component} from 'react';
 import { Button, Form, Segment } from 'semantic-ui-react';
 
 class ProfileChoice extends Component {
-  state = {isEmployer: false, isEmployee: true}
+  state = { activeItem: '' }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { isEmployee, isEmployer } = this.state;
-    if ((isEmployee === true) && (isEmployer === false)){
+    const { activeItem } = this.state;
+    if (activeItem === 'employee'){
         // set user.type == employee
     }
-    if ((isEmployer === true) && (isEmployee === false)){
-      // set user.type == employer
-    }
+    if (activeItem === 'employer'){
+      // set user.type == employee
+  }
     
   }
 
@@ -20,9 +20,9 @@ class ProfileChoice extends Component {
     const { name, value } = e.target;
     this.setState({ [name]: !value });
   }
-  
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
   render() {
-    const {isEmployee, isEmployer} = this.state;
+    const {activeItem} = this.state;
     return (
       <div style={{
         width: '100%',
@@ -39,18 +39,16 @@ class ProfileChoice extends Component {
         <Form onSubmit={this.handleSubmit}>
           <Segment textAlign='center' basic>
             <Button color='white'
-              name = 'isEmployee'
-              value = {isEmployee}
-              type = 'isEmployee'
-              onClick = {this.handleChange}
+              name = 'employee'
+              active={activeItem === 'employee'}
+              onClick = {this.handleItemClick}
               style={{color:'#2f2d91'}}>
               Employee
             </Button>
             <Button color='white'
-              name = 'isEmployer'
-              value = {isEmployer}
-              type = 'isEmployer'
-              onClick = {this.handleChange}
+              name = 'employer'
+              active={activeItem === 'employer'}
+              onClick = {this.handleItemClick}
               style={{color:'#2f2d91'}}>
               Employer
             </Button>

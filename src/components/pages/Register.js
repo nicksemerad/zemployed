@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Form, Segment } from 'semantic-ui-react';
+import { Button, Form, Segment, Label } from 'semantic-ui-react';
 
 class Register extends Component {
   state = { email: '', password: '', passwordConfirmation: '', };
@@ -33,10 +33,14 @@ class Register extends Component {
        
       }}>
       <Segment basic>
-      <h1 style={{color:'white', textAlign: 'center'}}>Register</h1>
+      <h1 style={{color:'white', textAlign: 'center'}}>
+        <em>Register</em>
+      </h1>
         <Form onSubmit={this.handleSubmit}>
+        <Label as='a' color='blue' ribbon>
+          First Name
+        </Label>
           <Form.Input
-            label="Email"
             required
             autoFocus
             name='email'
@@ -44,8 +48,10 @@ class Register extends Component {
             placeholder='Email'
             onChange={this.handleChange}
           />
+          <Label as='a' color='blue' ribbon>
+            Password
+          </Label>
           <Form.Input
-            label="Password"
             required
             name='password'
             value={password}
@@ -53,8 +59,10 @@ class Register extends Component {
             type='password'
             onChange={this.handleChange}
           />
+          <Label as='a' color='blue' ribbon>
+            Password Confirmation
+          </Label>
           <Form.Input
-            label="Password Confirmation"
             required
             name='passwordConfirmation'
             value={passwordConfirmation}

@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {Segment, Button, Form } from 'semantic-ui-react'
+import {Segment, Button, Form, Label } from 'semantic-ui-react'
 
 class ProfileSetup extends Component {
-  state = { firstName: '', lastName: '',  };
+  state = { firstName: '', lastName: '',  etc: ''};
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { firstName, lastName, jobTitle } = this.state;
+    // set the user attributes to the resulting text
   }
 
   handleChange = (e) => {
@@ -15,7 +15,6 @@ class ProfileSetup extends Component {
   }
 
   render() {
-    const { firstName, lastName, jobTitle } = this.state;
     return (
       <div style={{
         width: '100%',
@@ -28,33 +27,63 @@ class ProfileSetup extends Component {
        
       }}>
       <Segment basic>
-      <h1 style={{color:'white', textAlign: 'center'}}>Tell us about yourself</h1>
+      <h1 style={{color:'white', textAlign: 'center'}}>
+        <em>Tell us about yourself</em>
+      </h1>
         <Form onSubmit={this.handleSubmit}>
+          <Label as='a' color='blue' ribbon>
+            First Name
+          </Label>
           <Form.Input
-            label="First Name"
             required
             autoFocus
             name='firstName'
-            value={firstName}
+            // value={firstName}
             placeholder='First Name'
             onChange={this.handleChange}
           />
+          <Label as='a' color='blue' ribbon>
+            Last Name
+          </Label>
           <Form.Input
-            label="Last Name"
             required
             name='lastName'
-            value={lastName}
+            // value={lastName}
             placeholder='Last Name'
             type='lastName'
             onChange={this.handleChange}
           />
+          <Label as='a' color='blue' ribbon>
+            Job Title
+          </Label>
           <Form.Input
-            label="Job Title"
             required
             name='jobTitle'
-            value={jobTitle}
+            // value={jobTitle}
             placeholder='Job Title'
             type='password'
+            onChange={this.handleChange}
+          />
+          <Label as='a' color='blue' ribbon>
+            State
+          </Label>
+          <Form.Input
+            required
+            autoFocus
+            name='userState'
+            // value={firstName}
+            placeholder='New York'
+            onChange={this.handleChange}
+          />
+          <Label as='a' color='blue' ribbon>
+            City
+          </Label>
+          <Form.Input
+            required
+            autoFocus
+            name='userCity'
+            // value={firstName}
+            placeholder='New York'
             onChange={this.handleChange}
           />
           <Segment textAlign='center' basic>

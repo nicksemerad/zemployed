@@ -20,7 +20,9 @@ const Home = () => (
 
     
     <img src={Banner} alt={'Zemployed'} style={{width: '100%'}}/>
-
+    <h1 style={{color: 'white'}}>
+      <em>One Profile, Any Job.</em>
+      </h1>
     <div style={{marginTop: '50px'}}>
     <Button color='#FFFFFF'>
         <Link to="/register" style={{color:'#2f2d91'}}>
