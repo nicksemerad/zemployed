@@ -9,7 +9,6 @@ class Footer extends Component {
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const { activeItem } = this.state
     return(
       <div style={{color: 'black'}}>
         <Segment inverted vertical style={{ margin: '5em 0em 0em', padding: '5em 5em' }}>
@@ -17,18 +16,18 @@ class Footer extends Component {
           <Grid.Column width={3}>
             <Header inverted as='h4' content='Join Us' />
             <List link inverted>
-              <List.Item as='a'>Home</List.Item>
-              <List.Item as='a'>Register</List.Item>
-              <List.Item as='a'>Log In</List.Item>
-              <List.Item as='a'>My Profile</List.Item>
+              <Link to='/'><List.Item as='a'>Home</List.Item></Link>
+              <Link to='/register'><List.Item as='a'>Register</List.Item></Link>
+              <Link to='/login'><List.Item as='a'>Log In</List.Item></Link>
+              <Link to='/profile'><List.Item as='a'>My Profile</List.Item></Link>
             </List>
           </Grid.Column>
           <Grid.Column width={3}>
             <Header inverted as='h4' content='Jobs' />
             <List link inverted>
-              <List.Item as='a'>All Jobs</List.Item>
+              <Link to='/jobs'><List.Item as='a'>All Jobs</List.Item></Link>
               <List.Item as='a'>List a Job</List.Item>
-              <List.Item as='a'>My Applications</List.Item>
+              <Link to='/profile'><List.Item as='a'>My Applications</List.Item></Link>
               <List.Item as='a'>Jobs For Me</List.Item>
             </List>
           </Grid.Column>
