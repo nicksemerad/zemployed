@@ -36,6 +36,10 @@ const Home = () => (
         <Link to="/setup_choice" style={{color:'#2f2d91'}}>
         Role</Link>
       </Button>
+      <Button color='white'>
+        <Link to="/listjob" style={{color:'#2f2d91'}}>
+        List A Job</Link>
+      </Button>
     </div>
   </div>
   </div>

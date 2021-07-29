@@ -15,6 +15,7 @@ import Assessment from './components/pages/Assessment';
 import Jobs from './components/pages/Jobs';
 import Job from './components/pages/Job';
 import Profile from'./components/pages/profile_pages/Profile'
+import ListJob from './components/pages/ListJob';
 
 class App extends Component {
   render() {
@@ -35,6 +36,7 @@ class App extends Component {
               <Route exact path='/assessment/:id' component={Assessment}/>
               <Route exact path='/jobs' component={Jobs}/>
               <Route exact path='/job/:id' component={Job}/>
+              <Route exact path='/listjob' component={ListJob}/>
               <Route component={NoMatch} />
             </Switch>
         </Container>

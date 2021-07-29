@@ -16,10 +16,11 @@ class Footer extends Component {
           <Grid.Column width={3}>
             <Header inverted as='h4' content='Join Us' />
             <List link inverted>
-              <Link to='/'><List.Item as='a'>Home</List.Item></Link>
-              <Link to='/register'><List.Item as='a'>Register</List.Item></Link>
-              <Link to='/login'><List.Item as='a'>Log In</List.Item></Link>
+              <Link to='/'><List.Item as='a'>Home</List.Item></Link><br/>
+              <Link to='/register'><List.Item as='a'>Register</List.Item></Link><br/>
+              <Link to='/login'><List.Item as='a'>Log In</List.Item></Link><br/>
               <Link to='/profile'><List.Item as='a'>My Profile</List.Item></Link>
+
             </List>
           </Grid.Column>
           <Grid.Column width={3}>
@@ -28,7 +29,7 @@ class Footer extends Component {
               <Link to='/jobs'><List.Item as='a'>All Jobs</List.Item></Link>
               <List.Item as='a'>List a Job</List.Item>
               <Link to='/profile'><List.Item as='a'>My Applications</List.Item></Link>
-              <List.Item as='a'>Jobs For Me</List.Item>
+              <List.Item as='a'>Jobs Near Me</List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={3}>
